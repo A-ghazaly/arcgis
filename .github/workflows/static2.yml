@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML form with dropdown select</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+ $(function(){
+  $("#country").select2();
+ }); 
+</script>
+<style>
+body{
+    background: #eee;
+}
+.signupdiv{
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 1px 2px 3px #ccc;
+    border-radius: 7px;
+    text-align: center;
+    width: 35%;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
+#signupform{
+    padding: 15px;
+}
+input, select{
+    margin-bottom: 10px;
+    height: 38px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+}
+input{
+    width: 97%;
+}
+button, select{
+    width: 100%;
+}
+button{
+    height: 45px;
+    background: #188c01;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="signupdiv">
+  <select id="country" onchange="window.location=this.options[this.selectedIndex].value">  
+   <option value="">Select your city</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/8f138e373934481fabbe354ec0f5c91a#p1=mansoura/">El-Mansoura</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/8f138e373934481fabbe354ec0f5c91a#p1=el%20hamam/">El-Hamam</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/cacceafc57cf499eb5137eceec1047b7/">Cairo</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/cacceafc57cf499eb5137eceec1047b7/">Giza</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/cacceafc57cf499eb5137eceec1047b7/">Alexandria</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/cacceafc57cf499eb5137eceec1047b7/">Aswan</option>
+   <option value="https://esrieg.maps.arcgis.com/apps/dashboards/cacceafc57cf499eb5137eceec1047b7/">Luxor</option>
+  </select>
+</div>
+</body>
+</html>
